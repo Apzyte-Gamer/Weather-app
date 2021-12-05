@@ -35,6 +35,7 @@ header a {
     color: #888888;
     margin-right: 16px;
     text-decoration: none;
+    padding: 8px 6px;
 }
 
 .potrait {
@@ -52,4 +53,11 @@ button {
     background: #888888;
     color: white;
     padding: 8px;
+}
+
+.links:hover {
+    background-color: darkcyan;
+    padding: 8px 6px;
+    color: white;
+    border-radius: 3px;
 }
