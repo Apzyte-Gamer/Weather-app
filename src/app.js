@@ -23,14 +23,14 @@ app.use(express.static(publicDirectoryPath));
 app.get("", (req, res) => {
   res.render("index", {
     title: "Weather",
-    name: "Apzyte Gamer",
+    name: "Amritansh Sati",
   });
 });
 
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "About Me",
-    name: "Apzyte Gamer",
+    name: "Amritansh Sati",
   });
 });
 
@@ -38,7 +38,7 @@ app.get("/help", (req, res) => {
   res.render("help", {
     helpText: "This is some helpful text.",
     title: "Help",
-    name: "Apzyte Gamer",
+    name: "Amritansh Sati",
   });
 });
 
@@ -89,7 +89,7 @@ app.get("/products", (req, res) => {
 app.get("/help/*", (req, res) => {
   res.render("404", {
     title: "404",
-    name: "Apzyte Gamer",
+    name: "Amritansh Sati",
     errorMessage: "Help article not found!",
   });
 });
@@ -97,7 +97,7 @@ app.get("/help/*", (req, res) => {
 app.get("*", (req, res) => {
   res.render("404", {
     title: "404",
-    name: "Apzyte Gamer",
+    name: "Amritansh Sati",
     errorMessage: "Page not found.",
   });
 });
