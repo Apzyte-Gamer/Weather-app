@@ -1,0 +1,29 @@
+const weatherForm = document.querySelector("#weatherForm");
+const description = document.querySelector("#description");
+const locationInput = document.querySelector("#location");
+const temperature = document.querySelector("#temperature");
+const feelsLike = document.querySelector("#feelsLike");
+const precip = document.querySelector("#precip");
+const wind = document.querySelector("#wind");
+
+weatherForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const location = locationInput.value;
+  description.textContent = "Loading...";
+
+  fetch("/weather?address=" + location).then((response) => {
+    response.json().then((data) => {
+      if (data.error) {
+        description.textContent = data.error;
+      } else {
+        locationInput.value = data.location;
+        description.textContent = data.forecast.description;
+        temperature.textContent = `${data.forecast.temperature} °C`;
+        feelsLike.textContent = `Feels Like: ${data.forecast.feelsLike} °C`;
+        precip.textContent = `Precip: ${data.forecast.precip}%`;
+        wind.textContent = `Wind Speed(${data.forecast.windDir}): ${data.forecast.wind}`;
+      }
+    });
+  });
+});
