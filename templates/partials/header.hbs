@@ -1,48 +1,51 @@
-<link href="css/output.css" rel="stylesheet" />
+<header
+  class="bg-teal-300 dark:bg-teal-600 flex flex-wrap items-center px-2 md:px-3 lg:px-4 py-2 md:py-2 lg:py-3"
+>
 
-<nav class="flex items-center justify-between flex-wrap bg-teal-200 p-6">
-  <div class="flex items-center flex-shrink-0 text-white mr-6">
-    <img
-      class="fill-current h-8 w-8 mr-2"
-      width="54"
-      height="54"
-      src="img/weather.png"
-    />
-    <span class="font-semibold text-gray-700 text-xl tracking-tight"><a href="/">Weather App</a></span>
+  <div class="flex-1 flex items-center text-base sm:text-lg lg:text-xl">
+    <i class="fas fa-cloud-sun"></i>
+    <h1 class="ml-1 font-semibold">Weather App</h1>
   </div>
-  <div class="block lg:hidden">
-    <button
-      class="flex items-center px-3 py-2 border rounded text-teal-500 border-teal-400 hover:text-white hover:border-white"
-    >
-      <svg
-        class="fill-current h-3 w-3"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      ><title>Menu</title><path
-          d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
-        ></path></svg>
-    </button>
+
+  <div class="sm:items-center sm:w-auto w-full" id="menu">
+    <nav class="">
+      <ul
+        class="absolute sm:static w-full sm:bg-transparent sm:flex items-center justify-between text-sm sm:text-base lg:text-lg -ml-2 sm:ml-0 pt-2 sm:pt-0"
+      >
+        <li><a
+            href="/"
+            class="block ml-6 sm:mx-1 mt-0 px-1 py-1 sm:px-2 font-semibold rounded hover:bg-purple-800 hover:text-gray-200"
+          >Weather</a>
+        </li>
+        <li><a
+            href="/about"
+            class="block ml-6 sm:mx-1 mt-0 px-1 py-1 sm:px-2 font-semibold rounded hover:bg-purple-800 hover:text-gray-200"
+          >About</a>
+        </li>
+        <li><a
+            href="/help"
+            class="block ml-6 sm:mx-1 mt-0 px-1 py-1 sm:px-2 font-semibold rounded hover:bg-purple-800 hover:text-gray-200"
+          >Help</a>
+        </li>
+        <li>
+          <div class="flex items-center space-x-2">
+            <span class="text-sm text-gray-800 font-semibold dark:text-gray-400">Light</span>
+            <div>
+              <input type="checkbox" name="" id="toggle" class="hidden" />
+              <label for="toggle" class="cursor-pointer">
+                <div
+                  class="w-9 h-5 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full p-1"
+                >
+                  <div
+                    class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform duration-300 ease-in-out"
+                  ></div>
+                </div>
+              </label>
+            </div>
+            <span class="text-sm text-gray-400 font-semibold dark:text-gray-100">Dark</span>
+          </div>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <div class="w-full font-bold block lg:flex lg:items-center lg:w-auto">
-    <div class="text-lg font-sans lg:flex-grow">
-      <a
-        href="/"
-        class="block mt-4 lg:inline-block lg:mt-0 text-purple-900 hover:text-white mr-4"
-      >
-        Weather
-      </a>
-      <a
-        href="/about"
-        class="block mt-4 lg:inline-block lg:mt-0 text-purple-900 hover:text-white mr-4"
-      >
-        About
-      </a>
-      <a
-        href="/help"
-        class="block mt-4 lg:inline-block lg:mt-0 text-purple-900 hover:text-white"
-      >
-        Help
-      </a>
-    </div>
-  </div>
-</nav>
+</header>

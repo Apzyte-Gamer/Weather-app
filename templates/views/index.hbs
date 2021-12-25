@@ -1,4 +1,4 @@
-<html lang="en">
+<html class="dark" lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,22 +11,46 @@
   <title>Weather</title>
 </head>
 
-<body>
-  <div class="main-content">
-    {{>header}}
+<body class="bg-teal-500 dark:bg-teal-900 dark:text-gray-200">
+  <main class="">
+    <div class="main-content">
+      {{>header}}
 
-    <p>Use this site to get your weather!</p>
+      <div class="">
+        <div>
+          <div class="flex justify-center mt-2">
+            <form>
+              <input id="location"
+                class="border w-full mb-2 border-gray-300 dark:text-slate-800 px-3 py-2 rounded-lg shadow-sm foucs:outline-none foucs:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                placeholder="Location" />
+              <button
+                class="w-full text-lg justify-center py-2 px-4 border border-transparent rounded-md shadow-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 foucs:outline-none focus:ring-2 focus:ring-offset-2 foucs:ring-indigo-500">Search</button>
+            </form>
+          </div>
+        </div>
+        <p id="description" class="text-center font-medium text-base sm:text-lg lg:text-xl mt-1"></p>
+        <div class="flex justify-center">
+          <div
+            class="justify-center bg-blue-600 bg-opacity-10 rounded-lg lg:tracking-wider shadow-lg mt-3 p-1 sm:p-4 mx-auto sm:max-w-md lg:max-w-xl md:px-12 md:py-4 lg:mx-8 grid sm:grid-rows-1 grid-flow-col gap-4 md:gap-12">
+            <p id="temperature"
+              class="font-bold text-center inline-block self-center text-3xl lg:6xl row-span-1 col-span-1 sm:text-5xl">
+              --°C</p>
+            <div class="font-medium text-base sm:text-lg lg:text-xl leading-relaxed row-span-1 col-span-3">
+              <p id="feelsLike">Feels Like: --°C</p>
+              <p id="precip">Precip: --%</p>
+              <p id="wind">Wind Speed(Dir): --</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-2 flex justify-center items-center sm:ml-2 flex-col">
+          <p class="text-2xl font-bold font-codefont" id="msg-1"></p>
+          <p class="font-mono text-lg font-semibold text-white break-all" id="msg-2"></p>
+        </div>
+      </div>
 
-    <div>
-      <form>
-        <input placeholder="Location" />
-        <button>Search</button>
-      </form>
     </div>
-
-    <p id="msg-1"></p>
-    <p id="msg-2"></p>
-  </div>
+  </main>
+  
 
   {{>footer}}
 
