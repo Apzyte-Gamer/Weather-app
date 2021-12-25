@@ -12,6 +12,17 @@ const toggleDarkMode = function () {
   checkbox.checked ? html.classList.add("dark") : html.classList.remove("dark");
 };
 
+$(document).ready(function () {
+  $(".nav-toggler").each(function (_, navToggler) {
+    var target = $(navToggler).data("target");
+    $(navToggler).on("click", function () {
+      $(target).animate({
+        height: "toggle",
+      });
+    });
+  });
+});
+
 toggleDarkMode();
 checkbox.addEventListener("click", toggleDarkMode);
 

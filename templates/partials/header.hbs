@@ -1,51 +1,99 @@
-<header
-  class="bg-teal-300 dark:bg-teal-600 flex flex-wrap items-center px-2 md:px-3 lg:px-4 py-2 md:py-2 lg:py-3"
+<nav
+  class="flex items-center bg-teal-300 dark:bg-teal-600 dark:text-white p-3 flex-wrap"
 >
-
   <div class="flex-1 flex items-center text-base sm:text-lg lg:text-xl">
     <i class="fas fa-cloud-sun"></i>
+    {{! <img class="h-6 sm:h-8 lg:h-10" src="/img/weather.png" alt="Weather Icon with Sun and Clouds."> }}
     <h1 class="ml-1 font-semibold">Weather App</h1>
   </div>
-
-  <div class="sm:items-center sm:w-auto w-full" id="menu">
-    <nav class="">
-      <ul
-        class="absolute sm:static w-full sm:bg-transparent sm:flex items-center justify-between text-sm sm:text-base lg:text-lg -ml-2 sm:ml-0 pt-2 sm:pt-0"
+  <button
+    class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
+    data-target="#navigation"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16"
+      ></path>
+    </svg>
+  </button>
+  <div
+    class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
+    id="navigation"
+  >
+    <div
+      class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
+    >
+      <a
+        href="#"
+        class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-500 dark:text-white items-center justify-center hover:bg-gray-900 hover:text-white"
       >
-        <li><a
-            href="/"
-            class="block ml-6 sm:mx-1 mt-0 px-1 py-1 sm:px-2 font-semibold rounded hover:bg-purple-800 hover:text-gray-200"
-          >Weather</a>
-        </li>
-        <li><a
-            href="/about"
-            class="block ml-6 sm:mx-1 mt-0 px-1 py-1 sm:px-2 font-semibold rounded hover:bg-purple-800 hover:text-gray-200"
-          >About</a>
-        </li>
-        <li><a
-            href="/help"
-            class="block ml-6 sm:mx-1 mt-0 px-1 py-1 sm:px-2 font-semibold rounded hover:bg-purple-800 hover:text-gray-200"
-          >Help</a>
-        </li>
-        <li>
-          <div class="flex items-center space-x-2">
-            <span class="text-sm text-gray-800 font-semibold dark:text-gray-400">Light</span>
-            <div>
-              <input type="checkbox" name="" id="toggle" class="hidden" />
-              <label for="toggle" class="cursor-pointer">
-                <div
-                  class="w-9 h-5 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full p-1"
-                >
-                  <div
-                    class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform duration-300 ease-in-out"
-                  ></div>
-                </div>
-              </label>
-            </div>
-            <span class="text-sm text-gray-400 font-semibold dark:text-gray-100">Dark</span>
+        <span>Home</span>
+      </a>
+      <a
+        href="#"
+        class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-500 dark:text-white items-center justify-center hover:bg-gray-900 hover:text-white"
+      >
+        <span>About</span>
+      </a>
+      <a
+        href="#"
+        class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-500 dark:text-white items-center justify-center hover:bg-gray-900 hover:text-white"
+      >
+        <span>Services</span>
+      </a>
+      <a
+        href="#"
+        class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-500 dark:text-white items-center justify-center hover:bg-gray-900 hover:text-white"
+      >
+        <span>Gallery</span>
+      </a>
+      <a
+        href="#"
+        class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-500 dark:text-white items-center justify-center hover:bg-gray-900 hover:text-white"
+      >
+        <span>Products</span>
+      </a>
+      <a
+        href="#"
+        class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-500 dark:text-white items-center justify-center hover:bg-gray-900 hover:text-white"
+      >
+        <span>Contact Us</span>
+      </a>
+    </div>
+    <div class="px-3 py-2 flex items-center space-x-2">
+      <span
+        class="text-sm text-gray-800 font-semibold dark:text-gray-400"
+      >Light</span>
+      <div>
+        <input type="checkbox" name="" id="toggle" class="hidden" />
+        <label for="toggle" class="cursor-pointer">
+          <div
+            class="w-9 h-5 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full p-1"
+          >
+            <div
+              class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform duration-300 ease-in-out"
+            ></div>
           </div>
-        </li>
-      </ul>
-    </nav>
+        </label>
+      </div>
+      <span
+        class="text-sm text-gray-400 font-semibold dark:text-gray-100"
+      >Dark</span>
+    </div>
   </div>
-</header>
+</nav>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"
+></script>
+<script src="js/app.js"></script>
